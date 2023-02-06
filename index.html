@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+        <form action="#" id="form" name="myform">
+            <h2>Register:</h2>
+            <span class="error" style="display: none; color: red;"></span>
+                <div data-step="0">
+                    <label for="">Name:</label>
+                    <input type="text"placeholder="First Name..." class="input" id="fname" required>
+                    <input type="text"placeholder="Last Name..." class="input" id="lname" required>
+                    
+                </div>
+                <div data-step="1">
+                    <label for="">Contact Info:</label>
+                    <input type="email" placeholder="E-mail..." class="input" id="em">
+                    
+                    <input type="number" placeholder="Phone..."  class="input" id="phone" maxlength="10">
+                    <span id="errorforphone" style="display: none; color: red;"></span>
+                </div>
+                <div data-step="2">
+                    <label for="">Birthday:</label>
+                    <input type="text" id="dd" class="input" placeholder="dd" maxlength="2" minlength="1">
+                    <span id="errorfordate" style="display: none; color: red;"></span>
+                    <input type="text" id="mm" class="input" placeholder="mm" maxlength="2" minlength="1">
+                    <span id="errorformonth" style="display: none; color: red;"></span>
+                    <input type="text" id="yyyy" class="input" placeholder="yyyy"maxlength="4" minlength="4">
+                    <span id="errorforyear" style="display: none; color: red;"></span>
+                  
+                </div>
+                <div data-step="3">
+                    <label for="">Login Info:</label>
+                    <input type="text" placeholder="Username..." class="input" id="user">
+                   
+                    <span id="errorforpassword" style="display: none; color: red;"></span>
+                    <input type="password" placeholder="Password..." class="input" id="password">
+                    
+                </div>
+            <button id="next">Next</button>
+            <button id="submit">Submit</button>
+            <button id="previous">Previous</button>
+            
+            <section>
+           <p slide-step="0"></p>
+           <p slide-step="1"></p>
+           <p slide-step="2"></p>
+           <p slide-step="3"></p>
+            </section>
+            <table id="tb">
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Date</th>
+                <th>Month</th>
+                <th>Year</th>
+                <th>Username</th>
+                <th>Password</th>
+                <tbody id="table"></tbody>
+            </table>
+        </form>
+    <script src="script.js" defer></script>
+</body>
+</html>
