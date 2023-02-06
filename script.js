@@ -148,3 +148,11 @@ submit.addEventListener("click", (e) => {
     currentStep = 0
     render()
 })
+document.addEventListener('keypress', (event)=>{
+    let keyCode = event.keyCode ? event.keyCode : event.which;
+    if(currentStep == 3 && keyCode === 13){;
+      submit.click();
+    }else{
+        return false;
+    }
+  });
